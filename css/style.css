@@ -3,3 +3,43 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    font-family: Helvetica, Arial, sans-serif; /*can put fonts in custom order - the rest are backup fonts */
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+}
+
+/* header */
+header{
+    display: flex;
+    width: 100%;
+    height: 50vh; /* viewport height - the height of the device you're viewing on */
+    background-image: url(images/cat-medium-1.jpg);
+    background-size: cover;
+    background-position-y: 40%;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+/* tablet dimensions */
+@media only screen and(min-width: 767px){
+    header h1{
+        font-size: 26px;
+    }
+
+}
+
+/* desktop dimensions */
+@media only screen and(min-width: 991px){
+    header h1{
+        font-size: 40px;
+    }
+}
