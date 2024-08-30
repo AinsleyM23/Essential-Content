@@ -2,3 +2,12 @@
     margin: 0;
     padding: 0;
 }
+
+body{
+    color: black;
+    background-color: blue;
+}
+
+div1{
+    background-color: lightblue;
+}
