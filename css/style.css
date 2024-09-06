@@ -7,6 +7,7 @@
 /* Applies to the entire body */
 body{
     font-family: Helvetica, Arial, sans-serif; /*can put fonts in custom order - the rest are backup fonts */
+    background-color: #F28B50;
 }
 
 /* anchor tags */
@@ -54,7 +55,53 @@ section div p{
     padding: 2%; /*spaces out the elements*/
 }
 
+/* parallax container */
+.parallax{
+    background-image: url(../images/cafe.jpg);
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #A63F03; /*backup if image doesn't load*/
+    background-attachment: fixed; /*image will stay fixed in one place as you scroll*/
+}
 
+/* meet & greet cat gallery */
+div.scroll-container {
+    background-color: #A63F03;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+    display: flex;
+    width: max-content;
+    margin: 25px;
+  }
+
+div.scroll-container img {
+    padding:5px;
+    height: 500px;
+}
+
+/* hover information */
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+  
 /* tablet dimensions */
 @media only screen and (min-width: 767px){
     header h1{
