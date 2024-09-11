@@ -84,7 +84,7 @@ div.scroll-container img {
 }
 
 /* hover information */
-.image {
+/* .image {
     opacity: 1;
     display: block;
     width: 100%;
@@ -108,7 +108,7 @@ div.scroll-container img {
     opacity: 0.3;
 }
   
-.scroll-container:hover .overlay {
+.scroll-container :hover .overlay {
     opacity: 1;
 }
   
@@ -117,7 +117,7 @@ div.scroll-container img {
     color: white;
     font-size: 16px;
     padding: 16px 32px;
-}
+} */
   
 /* tablet dimensions */
 @media only screen and (min-width: 767px){
