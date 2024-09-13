@@ -7,7 +7,7 @@
 /* Applies to the entire body */
 body{
     font-family: Helvetica, Arial, sans-serif; /*can put fonts in custom order - the rest are backup fonts */
-    background-color: blue
+    background-color: blue;
 }
 
 /* anchor tags */
