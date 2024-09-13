@@ -25,16 +25,38 @@ nav{
     width: 100%;
     display: flex;
     flex-direction: column;
+    height: 80px;
+    background-color: #FFFAF0;
+    position: relative;
 }
 
-/* for logo image */
+/* container for logo image in the nav*/
 nav div{
+    height: 100%;
+    margin: auto;
+}
 
+/* logo image */
+nav div img{
+    height: 100%;
+    width: unset; /*unsets it from the parent*/
+    padding: 5px;
 }
 
 /* container for nav links */
 nav ul{
+    display: none;
+    background-color: #FFFAF0;
+}
 
+.active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100bvh;
+    position: fixed;
+    width: 100%;
+    top: 80px;
 }
 
 /* listed items in the nav */
@@ -45,6 +67,14 @@ nav li{
 /* anchors in the listed items */
 nav li a{
 
+}
+
+.hamburger{
+    font-size: 30px; /*unicode to be treated like fonts rather than images*/
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 10px;
 }
 
 /* header */
