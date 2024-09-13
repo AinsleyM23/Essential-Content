@@ -80,7 +80,7 @@ div.scroll-container {
 
 div.scroll-container img {
     padding:5px;
-    height: 500px;
+    height: 300px;
 }
 
 /* MIGHT USE LATER */
@@ -128,6 +128,11 @@ div.scroll-container img {
     section div{
         width: 330px;
     }
+
+    div.scroll-container img {
+        padding:5px;
+        height: 400px;
+    }
 }
 
 /* desktop dimensions */
@@ -139,6 +144,11 @@ div.scroll-container img {
     /* Alters the layout of the section when loaded on desktop */
     section{
         flex-direction: row;
+    }
+
+    div.scroll-container img {
+        padding:5px;
+        height: 500px;
     }
 }
 
