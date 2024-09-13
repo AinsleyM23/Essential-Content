@@ -20,6 +20,33 @@ img{
     width: 100%;
 }
 
+/* navigation */
+nav{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* for logo image */
+nav div{
+
+}
+
+/* container for nav links */
+nav ul{
+
+}
+
+/* listed items in the nav */
+nav li{
+
+}
+
+/* anchors in the listed items */
+nav li a{
+
+}
+
 /* header */
 header{
     display: flex;
