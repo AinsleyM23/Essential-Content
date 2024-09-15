@@ -8,6 +8,56 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- navigation bar -->
+    <nav>
+        <div>
+            <a href="/"><img src="images/logo-zoom.png"></a>
+        </div>
+        <ul id="mobile_nav"> <!-- shortcut ul(li>a)*2 -->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="/">Contact</a></li>
+        </ul>
+        <!-- hamburger menu -->
+        <div id="mobile_click" class="hamburger">&#8801</div>
+    </nav>
+    <!-- background image with page header -->
+    <div class="contact-header">
+        <h1>Contact Us</h1>
+    </div>
+
+    <section>
+        <h2>Get In Touch!</h2>
+        <div class="contact-section">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis voluptatum harum minus est. Iste qui, at animi cupiditate voluptatem, ratione aspernatur nam nesciunt consequuntur, alias ab dignissimos voluptas tempore reiciendis.
+            Incidunt quod exercitationem recusandae cumque, quas vel voluptas, beatae provident repudiandae deleniti soluta commodi possimus mollitia inventore adipisci nobis. Eius sapiente cupiditate nesciunt accusamus, laboriosam architecto accusantium eum ut. Quo.
+            Eos vel culpa eligendi vitae excepturi hic expedita nam debitis, consequuntur nulla optio cumque amet cum sapiente mollitia, corrupti nemo placeat qui magni quas ex soluta a distinctio error! Labore.</p>
+        </div>
+        <form id="contact-form" method="POST" action="sendmail.php">
+            <div class="form-row form-error" style="display:none;"></div>
+            <div class="form-row">
+              <label for="contact-form-name">Name:</label>
+              <input id="contact-form-name" class="form-input" type="text" name="name" required>
+            </div>
+            <div class="form-row">
+              <label for="contact-form-email">Email:</label>
+              <input id="contact-form-email" class="form-input" type="email" name="email" required>
+            </div>
+            <div class="form-row">
+              <label for="contact-form-phone">Phone:</label>
+              <input id="contact-form-phone" class="form-input" type="tel" name="phone">
+            </div>
+            <div class="form-row">
+              <label for="contact-form-message">Message:</label>
+              <textarea id="contact-form-message" class="form-input" name="message" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
     
+    </section>
+
+    <footer>
+        &copy; 2024 Ainsley Meldrum
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
