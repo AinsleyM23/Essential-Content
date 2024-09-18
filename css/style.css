@@ -205,6 +205,20 @@ div.scroll-container img {
 
 /* contact body layout */
 
+.contact-page{
+    display: flex;
+    flex-wrap: wrap; /*allows the section to alter between column and row depending on dimensions*/
+    justify-content: space-around;
+    margin-top: 2%;
+}
+
+.contact-page p{
+    padding: 2%;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+
 h2{
     padding: 20px; 
 }
