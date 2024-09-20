@@ -243,6 +243,7 @@ h2{
     border-radius: 15px;
     box-shadow: 5px 5px 5px black;
     padding: 20px;
+    background-color:#F28B50;
 }
 
 .form-row{
@@ -274,6 +275,11 @@ button{
     justify-content: center;
     border: black solid 2px;
     border-radius: 5px;
+    cursor: pointer; /*changes the cursor when displayed over the button*/
+}
+
+input:focus{
+    background: lightblue;
 }
 
 

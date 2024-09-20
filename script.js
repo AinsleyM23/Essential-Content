@@ -46,41 +46,56 @@ if (wordCount < 2) {
     return false;
 }
 
-    // Validate email
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        document.getElementById('emailError').textContent = 'Invalid email address';
-        return false;
-    }
-
-    // Validate message
-    if (message === '') {
-        document.getElementById('messageError').textContent = 'Message is required';
-        return false;
-    }
-
-    // Form is valid, save data to local storage
-    saveDataLocally(name, email, message);
-
-    // Redirect to confirmation.html
-    window.location.href = 'confirmation.html';
-
-    return false; // Prevent the form from submitting traditionally
+// Validate email
+var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!emailRegex.test(email)) {
+    document.getElementById('emailError').textContent = 'Invalid email address';
+    return false;
 }
 
-function saveDataLocally(name, email, message) {
+// Validate phone number
+var phoneRegex = /^[0-9]+$/;
+if (!phoneRegex.test(phone)) {
+    document.getElementById('phoneError').textContent = 'Invalid phone number';
+    return false;
+}
+
+var phoneCount = phone.trim().split(/\s+/).length;
+
+if (phoneCount < 11) { // || means OR in javascript
+    document.getElementById('phoneError').textContent = 'Phone number must contain 11 digits';
+    return false;
+
+// Validate message
+if (message === '') {
+    document.getElementById('messageError').textContent = 'Message is required';
+    return false;
+}
+
+// Form is valid, save data to local storage
+saveDataLocally(name, email, phone, message);
+
+// Redirect to confirmation.html
+window.location.href = 'confirmation.html';
+
+return false; // Prevent the form from submitting traditionally
+}
+
+function saveDataLocally(name, email, phone, message) {
     // Create an object to represent the form data
     var formData = {
         name: name,
         email: email,
+        phone: phone,
         message: message,
     };
 
     // Convert the object to a JSON string and save to local storage
     localStorage.setItem('formData', JSON.stringify(formData));
 
-}
-///////////////////////////////////// returning data from local storage to confirmation page ////////////////////////////////////////
+};
+
+// returning data from local storage to confirmation page
 
 // Retrieve data from local storage
 var storedData = localStorage.getItem('formData');
@@ -91,6 +106,10 @@ if (storedData) {
     document.getElementById('storedEmail').textContent = parsedData.email;
     document.getElementById('storedMessage').textContent = parsedData.message;
                                                      
-} else {
-    document.getElementById('storedData').textContent = "No data stored.";
+}
+
+else {
+    document.getElementById('storedData').textContent = 
+    'No data stored.'
+    }
 }
