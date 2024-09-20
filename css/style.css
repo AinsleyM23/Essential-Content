@@ -231,20 +231,54 @@ h2{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
 }
 
 /* contact form */
-.form-row {
-    margin-bottom: 10px;
+.contact-form{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border: black solid 2px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px black;
+    padding: 20px;
 }
 
-.form-input {
-    display: block;
+.form-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-.form-error {
-    color: red;
+/* form labels */
+.form-row label{
+    font-weight: bolder;
+}
+
+.form-row input{
+    padding: 10px;
+    margin: 10px;
+}
+
+.form-row textarea{
+    margin: 10px;
+}
+
+button{
+    margin: 15px;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: black solid 2px;
+    border-radius: 5px;
+}
+
+
+input:invalid, textarea:invalid{
+    border: red 1px solid;
 }
   
 /* tablet dimensions */
@@ -267,6 +301,10 @@ h2{
         list-style-type: none;
         align-items: center;
         justify-content: space-evenly;
+    }
+
+    .hamburger{
+        display: none;
     }
 }
 
@@ -292,6 +330,10 @@ h2{
         list-style-type: none;
         align-items: center;
         justify-content: space-evenly;
+    }
+
+    .hamburger{
+        display: none;
     }
 }
 
