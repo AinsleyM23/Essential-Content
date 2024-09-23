@@ -15,12 +15,15 @@ function validateForm() {
     document.getElementById('nameError').textContent = '';
     document.getElementById('emailError').textContent = '';
     document.getElementById('messageError').textContent = '';
+    document.getElementById('phoneError').textContent = '';
 
     // Get form values
     // The trim() function in JavaScript is used to remove whitespace (spaces, tabs, and newlines) from both the beginning and the end of a string. It is often used to clean up user input or to remove unnecessary whitespace
     var name = document.getElementById('name').value.trim();
     var email = document.getElementById('email').value.trim();
     var message = document.getElementById('message').value.trim();
+    // you had missed out the phone input
+    var phone = document.getElementById('phone').value.trim();
 
 
 
@@ -60,11 +63,13 @@ if (!phoneRegex.test(phone)) {
     return false;
 }
 
-var phoneCount = phone.trim().split(/\s+/).length;
+// var phoneCount = phone.trim().split(/\s+/).length;
+var phoneCount = phone.length;
 
-if (phoneCount < 11) { // || means OR in javascript
+if (phoneCount <11) { 
     document.getElementById('phoneError').textContent = 'Phone number must contain 11 digits';
     return false;
+}
 
 // Validate message
 if (message === '') {
@@ -105,6 +110,7 @@ if (storedData) {
     document.getElementById('storedName').textContent = parsedData.name;
     document.getElementById('storedEmail').textContent = parsedData.email;
     document.getElementById('storedMessage').textContent = parsedData.message;
+    document.getElementById('storedPhone').textContent = parsedData.phone;
                                                      
 }
 
@@ -112,4 +118,3 @@ else {
     document.getElementById('storedData').textContent = 
     'No data stored.'
     }
-}
