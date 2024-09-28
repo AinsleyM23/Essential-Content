@@ -203,6 +203,8 @@ div.scroll-container img {
     color: white;
     font-size: 16px;
     padding: 16px 32px;
+    width: fit-content;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /******** CONTACT PAGE *******/
