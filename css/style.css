@@ -79,6 +79,22 @@ nav li a:hover{
     color: #F28B50;
 }
 
+/* FontAwesome icons */
+i.fa-facebook{
+    color: #316FF6;
+    font-size: 35px;
+}
+
+i.fa-instagram{
+    color: #F77737;
+    font-size: 35px;
+}
+
+i.fa-x-twitter{
+    color: black;
+    font-size: 35px;
+}
+
 /* hamburger menu */
 .hamburger{
     font-size: 30px; /*unicode to be treated like fonts rather than images*/
@@ -229,6 +245,7 @@ div.scroll-container img {
     flex-wrap: wrap; /*allows the section to alter between column and row depending on dimensions*/
     justify-content: space-around;
     margin-top: 2%;
+    flex-direction: row;
 }
 
 .contact-page p{
@@ -305,7 +322,35 @@ input:focus{
 input:invalid, textarea:invalid{
     border: red 1px solid;
 }
-  
+
+.map{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.playfair-display {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.playfair-display-small {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 30px;
+}
+
 /* tablet dimensions */
 @media only screen and (min-width: 767px){
     header h1{
@@ -369,4 +414,17 @@ footer{
     font-weight: bolder;
     padding: 5px;
     margin: 5px;
+}
+
+.contact-column ul{
+    list-style: none;
+}
+
+.contact-column ul li{
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-column ul li a{
+    color: black;
 }
